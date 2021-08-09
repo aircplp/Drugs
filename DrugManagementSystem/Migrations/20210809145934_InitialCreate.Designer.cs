@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrugManagementSystem.Migrations
 {
     [DbContext(typeof(DrugContext))]
-    [Migration("20210809125734_InitialCreate")]
+    [Migration("20210809145934_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,11 +22,6 @@ namespace DrugManagementSystem.Migrations
 
             modelBuilder.Entity("DrugManagementSystem.Entities.Drug", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<string>("Code")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
@@ -41,7 +36,7 @@ namespace DrugManagementSystem.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Code");
 
                     b.ToTable("Drugs");
                 });
