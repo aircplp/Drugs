@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DrugManagementSystem.Controllers
 {
-    //[ApiKeyAuthorizeAttribute]
+    [ApiKeyAuthorize]
     [Route("api/drug")]
     public class DrugController : ControllerBase
     {

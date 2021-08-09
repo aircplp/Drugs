@@ -7,11 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DrugManagementSystem
 {
-    public class ApiKeyAuthorizeAttribute : IAsyncAuthorizationFilter
+    public class ApiKeyAuthorizeAttribute : ActionFilterAttribute, IActionFilter
     {
         private const string APIKEYNAME = "ApiKey";
 
-        public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
             if (!context.HttpContext.Request.Headers.TryGetValue(APIKEYNAME, out var extractedApiKey))
             {
@@ -36,6 +36,8 @@ namespace DrugManagementSystem
                 };
                 return;
             }
+
+            //this.OnActionExecuting(context);
         }
     }
 }
