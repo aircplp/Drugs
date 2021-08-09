@@ -5,6 +5,8 @@ namespace DrugManagementSystem.Entities
 {
     public class Drug
     {
+        public int Id { get; set; }
+
         [StringLength(30)]
         public string Code { get; set; }
 
