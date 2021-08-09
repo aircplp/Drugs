@@ -28,13 +28,13 @@ namespace DrugManagementSystem
             {
                new Drug {
                    Code = "Paracetamol",
-                   Label = "Paracetamol 500 mg suppositories 10 Pcs",
+                   Label = "Paracetamol 500 mg",
                    Description = "contains the active ingredient..",
                    Price = 5
                },
                new Drug {
                    Code = "BEN-U-RON",
-                   Label = "BEN-U-RON 250 mg suppositories",
+                   Label = "BEN-U-RON 250 mg",
                    Description = "contains the active ingredient of paracetamos",
                    Price = 15
                }

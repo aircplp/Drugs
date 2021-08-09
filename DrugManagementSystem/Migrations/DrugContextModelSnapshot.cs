@@ -20,11 +20,6 @@ namespace DrugManagementSystem.Migrations
 
             modelBuilder.Entity("DrugManagementSystem.Entities.Drug", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<string>("Code")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
@@ -39,7 +34,7 @@ namespace DrugManagementSystem.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Code");
 
                     b.ToTable("Drugs");
                 });

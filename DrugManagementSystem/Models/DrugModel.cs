@@ -1,11 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DrugManagementSystem.Entities
+namespace DrugManagementSystem.Models
 {
-    public class Drug
+    public class DrugModel
     {
-        [Key]
         [StringLength(30)]
         public string Code { get; set; }
 
@@ -14,7 +13,7 @@ namespace DrugManagementSystem.Entities
 
         public string Description { get; set; }
 
-        [Range(0.0, (Double) Decimal.MaxValue)]
+        [Range(0.0, (Double)Decimal.MaxValue)]
         public decimal Price { get; set; }
     }
 }

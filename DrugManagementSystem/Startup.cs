@@ -32,6 +32,7 @@ namespace DrugManagementSystem
 
             services.AddControllers();
             services.AddScoped<DrugMsSeeder>();
+            services.AddAutoMapper(this.GetType().Assembly);
 
             services.AddSwaggerGen(c =>
             {
